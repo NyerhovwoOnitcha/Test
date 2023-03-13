@@ -1,0 +1,8 @@
+---
+- name: install httpd
+  hosts: all
+  tasks: 
+   - name: install apache httpd
+     apt:
+      name: apache2
+      state: present
