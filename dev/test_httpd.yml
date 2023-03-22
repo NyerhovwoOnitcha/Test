@@ -1,0 +1,34 @@
+---
+- name: testing the httpd config
+  hosts: slave1
+  tasks:
+   - name: install httpd
+     apt:
+      name: apache2
+      state: present
+
+   - name: install git
+     apt:
+      name: git
+      state: present
+
+   - name: delete the index.html file in the html folder to enable us clone our repo into it
+     become_method: sudo
+     file:
+      path: /var/www/html/index.html
+      state: absent
+
+
+   - name: clone a repo
+     git:
+      repo: https://github.com/NyerhovwoOnitcha/tooling.git
+      dest: /var/www/html
+      force: yes
+
+   - name: copy html content to one level up
+     command: cp -r /var/www/html/. /var/www/ 
+
+   - name: Start service httpd, if not started
+     service:
+      name: httpd
+      state: started

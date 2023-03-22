@@ -1,0 +1,37 @@
+---
+- name: create direc
+  hosts: slave1
+  vars:
+   myscript: |
+    #!/usr/bin/sudo bash
+    useradd -m -s /bin/bash darey
+    echo -e "cnl12345\ncnl12345" | sudo passwd "darey"
+  tasks:
+   - name: create dir and add file
+     file:
+      path : /var/lib/jenkins/created_dir
+      state: directory
+     # owner: jenkins
+     # group: jenkins
+     # mode: '0777'
+
+   - name: copy script frpm local to remote dir created above
+     copy:
+      src: /var/lib/jenkins/Test/dev/script.sh
+      dest: /var/lib/jenkins/created_dir/
+     # owner: jenkins
+     # group: jenkins
+     # mode: '777'
+
+   - name: check if script above exists
+     stat:
+      path: /var/lib/jenkins/created_dir/script.sh
+     register: check
+
+   - name: confirm if it exists
+     debug:
+      var: check
+
+   - name: run the script
+     command: bash /var/lib/jenkins/created_dir/script.sh
+     when: check.stat.exists == True

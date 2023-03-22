@@ -1,0 +1,15 @@
+---
+- name: update web, nfs and db servers
+  hosts: slave1 
+  become: yes
+  tasks:
+    - name: ensure wireshark is at the latest version
+      yum:
+        name: wireshark
+        state: absent
+
+    - name: install unzip
+      yum:
+        name: unzip
+        state: absent
+      when: inventory_hostname in groups ['slave1']
