@@ -1,5 +1,4 @@
 ---
-- name: Install httpd, git, clone tooling website repo and copy the html content into html folder and start httpd service
-  hosts: uats
+- hosts: uats
   roles: 
    - uats
