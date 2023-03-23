@@ -30,3 +30,6 @@
    name: apache2
    state: started
 
+- name: write command saying we are done
+  debug:
+   msg: everything is sucessfull
