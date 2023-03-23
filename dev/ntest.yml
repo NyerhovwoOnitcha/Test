@@ -46,4 +46,6 @@
    - name: run the script
      script: /var/lib/jenkins/created_dir/script.sh
      when: check.stat.exists == True
-    
+   - name: message
+     debug:
+       msg: im home
