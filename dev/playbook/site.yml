@@ -1,6 +1,6 @@
 ---
-- hosts: slave1
-- import_playbook: ../static-assignments/common.yml
+#- hosts: slave1
+#- import_playbook: ../static-assignments/common.yml
 
 - hosts: uats
 - import_playbook: ../static-assignments/uat-webservers.yml
