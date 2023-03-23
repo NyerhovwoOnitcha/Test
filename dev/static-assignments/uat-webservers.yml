@@ -1,5 +1,5 @@
 ---
 - name: edit uat servers
-  hosts: uats
+  hosts: uat2
   roles: 
    - role: /var/lib/jenkins/Test/dev/roles/uats
