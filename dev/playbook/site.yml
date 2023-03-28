@@ -2,5 +2,4 @@
 #- hosts: slave1
 #- import_playbook: ../static-assignments/common.yml
 
-- hosts: nuat
 - import_playbook: ../static-assignments/uat-webservers.yml
