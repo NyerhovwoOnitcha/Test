@@ -1,34 +1,39 @@
 ---
 - name: install httpd
-  apt:
-   name: apache2
+  become: true
+  yum:
+   name: httpd
    state: present
 
 - name: install git
-  apt:
+  become: true
+  yum:
    name: git
    state: present
 
-- name: delete the index.html file in the html folder to enable us clone our repo into it
-  become_method: sudo
-  file:
-   path: /var/www/html/index.html
-   state: absent
-
-
 - name: clone a repo
+  become: true
   git:
    repo: https://github.com/NyerhovwoOnitcha/tooling.git
    dest: /var/www/html
    force: yes
 
 - name: copy html content to one level up
-  command: cp -r /var/www/html/. /var/www/
+  become: true
+  command: cp -r /var/www/html/html/ /var/www/
+
 
 - name: Start service httpd, if not started
+  become: true
   service:
-   name: apache2
+   name: httpd
    state: started
+
+- name: recursively remove /var/www/html/html/ directory
+  become: true
+  file:
+   path: /var/www/html/html
+   state: absent
 
 - name: write command saying we are done
   debug:
