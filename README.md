@@ -25,60 +25,29 @@
 ## Trigger build 1.1
 
 
+Network storage effectively solves two major storage problems—making data available to multiple users simultaneously and segregating storage from compute to enhance availability and scalability.
 
-1- Get your hair scenting Fabulous in record time
+Storage network protocols enable applications, servers and other systems to interface with storage across a network.
+ 
+A storage network protocol provides a standard set of rules that define how data is transmitted between devices. Data storage systems and sharing Solutions such as network attached storage (NAS) and storage area networks (SANs) and DAS rely on storage protocols to facilitate data communications. Cloud storage platforms also use protocols to provide access to their data repositories
 
-   The Arabian fragrance diffuser totally removes all traces of your hair smelling like Food, Cigarettes, bonfire/campfire, burnt coffee, KBBQ and even
-   Burned hair from Curlers and Blow Dryers in less than 5 minutes.
-   
-   The Oud fragrance scents lovely and makes your hair an absolute crowd pleaser.
-   
+SAN provides block storage and NAS provides file level storage
 
+A difference between NAS and SAN is that NAS is storage that connects to a network, and a SAN is a network of storage  that servers can connect to.
+Fibre Channel (FC), Internet small computer system interface (iSCSI), Fibre Channel over Ethernet (FCoE), Network File System (NFS), Common Internet File System (CIFS).
 
-2- 100% Heatless, Zero Humidity, Zero Grease and 100% Damage Free
-   
-   The oud fragrance diffuser doesn't emit any heat and WON'T burn your hair like a curler, it's just diffuses dry smoke
-
-   There's also no humidity as there's no water/oil water added to it. Just a Fragrance Diffuser
-
-   Healthy for your hair. 100% made from natural ingredients and causes Zero damage to your hair.
+DAS is direct attached storage....as the name implies the storage is directly connected to the computers or servers through scsi or other connections.... similar to an external hard drive inserted to your computer. DAS is not designed for sharing data across the network. It's mist suitable for small businesses that share data locally with little IT support.
 
 
-3- Perfect for any Type of hair
-
-   The arabian hair diffuser comes with an attachment for curly hair.
-
-   It can be used for weaves and locs too
-
-   It doesn't straigten your curls, there's no heat in it.
-   
-   It doesn't make your hair frizzy. It actually helps with frizz.
 
 
-2- Scent the way you want
-   You can add your own fragrance/scent to it and get yout hair scenting the way you want.  
 
 
-   
-4- Long Lasting Scent till your next wash
-   
-   The scent stays longer than any hair spray or Dry Shampoo
-   
+NAS...If you want to store data in a centralised ocation where it can be accessed from all your devices on your network, you can use NAS. A NAS is a storage device used for storing data and it does nothing else besides storing data
+Typically a NAS is a boss that will have multiple hard drives in a raid configuration for redundancy and it will also have a Network interface card that will attach to a switch or a router so that the data can be accessed over a network 
+And once it's on the network it can be accessed from other devices on the network as a shared drive.  They are used in homes and SMEs but their main disadvantage is that it has a single point of failure e.g if the power supply fails on the Nas then all the other devices will not be able to access it's data.
 
-5- Portable and Durable
-
-   The product is of high quality and does not break easy. It's also lightweight and will comfortably fit in your purse
-   
-   It has Dual Voltage
-
-
-6- Way better than Dry Shampoo
-
-   The fragrance diffuser method has been used by arabian women for centuries.
-   It's oud fragrance is 100 % made from natural ingredients, It's safer and doesn't get your hair greasy
-   
-
-Hate going to the restaurant wutb freshly wahthair and then it smells
-
-![H5d0405d0f4d544258760daa8e41097b0V](https://github.com/NyerhovwoOnitcha/Test/assets/101157174/c81786f8-99c5-47e0-b812-467d578838d5)
+A SAN is a special high speed network that's stores and provides access to large amounts of data. It's a dedicated network used for data storage. It consists of multiple disk arrays, switches and servers and as a result it's fault tolerant and the data is also shared with more than one disk array so if a switch or server or disk array goes down, the data can still be accessed . When a server accesses the data on a SAN, it does so as if it was a local hard drive. OS recognises SAN as a local attached hard drive rather than a shared network drive like NAS. SANs are also highly scalable cos adding more storage space can easily be done without an interruption on the network. 
+A SAN is a high speed Network cos all the devices are inter connected meaning that all the devices are connected to each other and they are inter connected using fiber channel (fiber optics) which is a standard for sans( it has high speed rates). They are extremely fast and also expensive. Some SANs use iSCSI as an alternative to fiber optics which is cheaper but not as fast. One of the reasons for using  SANs is that they are not affected by network traffic e.g bottlenecks that can happen in a LAN, this is cos they are not really a part of a LAN, they are partitioned off, they are basically a network all by itself. They are highly scalable and highly redundant.
+They are expensive and mainly used by large companies 
 
